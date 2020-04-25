@@ -6,6 +6,7 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] waterdrop;
     private const float xRange = 10;
+    private const float zRange = 10;
     private const float spawnPointZ = 1;
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class SpawnManager : MonoBehaviour
     void SpawnWater()
     {
         int randomwater = Random.Range(0, waterdrop.Length);
-        Instantiate(waterdrop[randomwater], new Vector3(Random.Range(-xRange, xRange), 0, 25), waterdrop[1].transform.rotation);
+        Instantiate(waterdrop[randomwater], new Vector3(Random.Range(-xRange, xRange), 25, Random.Range(-zRange, zRange)), waterdrop[randomwater].transform.rotation);
     }
 
 }
