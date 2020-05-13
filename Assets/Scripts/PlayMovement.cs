@@ -6,11 +6,15 @@ public class PlayMovement : MonoBehaviour
 {
     public float verSpeed = 20;
     public float hozSpeed = 10;
+    public AudioClip squishSound;
+    private AudioSource audioSource;
     public bool gameOver = false;
+    public ParticleSystem expParticle;
+    public GameObject powerUpPrefab;
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,9 +32,11 @@ public class PlayMovement : MonoBehaviour
         // game over if the player hits an obstacle
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            expParticle.Play();
             gameOver = true;
             Debug.Log("Game Over!");
-            //audioSource.PlayOneShot(explosionSound, 1.0f);
+            audioSource.PlayOneShot(squishSound, 1.0f);
+            //Destroy(gameObject);
         }
         // set on ground state to true if we hit the ground
     }
