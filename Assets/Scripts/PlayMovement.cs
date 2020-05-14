@@ -32,11 +32,11 @@ public class PlayMovement : MonoBehaviour
         // game over if the player hits an obstacle
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            expParticle.Play();
+            Instantiate(expParticle);
             gameOver = true;
             Debug.Log("Game Over!");
             audioSource.PlayOneShot(squishSound, 1.0f);
-            //Destroy(gameObject);
+            Destroy(gameObject, 0.5f);
         }
         // set on ground state to true if we hit the ground
     }
