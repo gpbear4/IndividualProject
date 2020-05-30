@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -8795672095745516084}
   - component: {fileID: 1811625550}
   - component: {fileID: 1811625551}
+  - component: {fileID: -8561124714439779842}
   m_Layer: 0
   m_Name: Water
   m_TagString: Enemy
@@ -111,7 +112,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &-8795672095745516084
 MonoBehaviour:
@@ -156,3 +157,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bae41eca80e9d9b4994374a5e3157e46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!111 &-8561124714439779842
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3213693764879000299}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 4aeefe45de4acec4fbf6f9d318d997d2, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 4aeefe45de4acec4fbf6f9d318d997d2, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0

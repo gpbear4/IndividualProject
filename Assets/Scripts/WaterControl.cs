@@ -9,7 +9,9 @@ public class WaterControl : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Floor"))
         {
-            anim.Play("water splat");
+            Debug.Log("Collide with floor");
+            anim.Play();
+            Destroy(gameObject, 1.0f);
         }
     }
     // Start is called before the first frame update
